@@ -1,0 +1,36 @@
+version: "3"
+services:
+  emqx:
+    image: emqx/emqx:${SOFTWARE_VERSION_TAG}
+    container_name: emqx
+    restart: always
+    ports:
+      - 1883:1883
+      - 172.17.0.1:8183:8083
+      - 172.17.0.1:8184:8084
+      - 8883:8883
+      - 172.17.0.1:47724:18083
+    volumes:
+      - data:/opt/emqx/data
+      - log:/opt/emqx/log
+      - etc:/opt/emqx/etc
+
+volumes:
+  data:
+    driver: local
+    driver_opts:
+      type: none
+      device: ${PWD}/data
+      o: bind
+  log:
+    driver: local
+    driver_opts:
+      type: none
+      device: ${PWD}/log
+      o: bind
+  etc:
+    driver: local
+    driver_opts:
+      type: none
+      device: ${PWD}/etc
+      o: bind
