@@ -20,7 +20,7 @@ You can open EMQX UI here:
 
 You can conveniently test your MQTT broker using an online tool. Follow these steps:
 
-1. Visit <a href="https://testclient-cloud.mqtt.cool/">MQTT Test Client</a>
+1. Visit <a target="_blank" href="https://testclient-cloud.mqtt.cool/">MQTT Test Client</a>
 
 2. Use the following credentials:
 

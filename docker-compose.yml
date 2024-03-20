@@ -5,7 +5,7 @@ services:
     restart: always
     environment:
       EMQX_NAME: emqx
-      EMQX_HOST: 172.17.0.1
+      EMQX_HOST: ${IP}
     ports:
       - 1883:1883
       - 172.17.0.1:8183:8083

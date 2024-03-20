@@ -28,6 +28,8 @@ environments:
     value: "5.5.1"
   - key: ADMIN_PASSWORD
     value: "random_password"
+  - key: IP
+    value: "[IP]"
 
 config:
   runTime: "dockerCompose"
