@@ -2,8 +2,10 @@ version: "3"
 services:
   emqx:
     image: emqx/emqx:${SOFTWARE_VERSION_TAG}
-    container_name: emqx
     restart: always
+    environment:
+      EMQX_NAME: emqx
+      EMQX_HOST: 172.17.0.1
     ports:
       - 1883:1883
       - 172.17.0.1:8183:8083
